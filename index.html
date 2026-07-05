@@ -9,7 +9,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -52,6 +52,9 @@
         .gallery-tile:hover img { transform: scale(1.06); }
         .gallery-tile:hover figcaption { opacity: 1; }
 
+        /* Logo wordmark */
+        .logo-wordmark { font-family: "Anton", "Arial Narrow", sans-serif; font-weight: 400; font-size: 1.9rem; line-height: 0.9; letter-spacing: 0.015em; text-transform: uppercase; display: inline-block; }
+
         /* Marquee */
         .marquee { display: flex; width: max-content; animation: marquee 46s linear infinite; }
         .marquee-wrap:hover .marquee { animation-play-state: paused; }
@@ -69,15 +72,8 @@
     <header id="navbar" class="fixed top-0 left-0 right-0 z-40 transition-all duration-500 bg-transparent">
         <div class="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-16 h-20 flex items-center justify-between">
             <!-- Logo -->
-            <a href="#top" class="flex items-center gap-3 group">
-                <div class="h-9 w-9 border border-[#0A0A0A] flex items-center justify-center relative">
-                    <span class="font-heading text-lg leading-none text-[#0A0A0A]" style="letter-spacing:-0.06em">R</span>
-                    <span class="absolute -bottom-[3px] -right-[3px] h-1.5 w-1.5 bg-[#0A0A0A]"></span>
-                </div>
-                <div class="flex flex-col leading-none">
-                    <span class="font-heading text-xl text-[#0A0A0A]" style="letter-spacing:0.02em">Regia<span class="serif-italic"> Modas</span></span>
-                    <span class="text-[9px] uppercase tracking-[0.35em] text-[#0A0A0A]/50 mt-1">Atelier — Est. 2007</span>
-                </div>
+            <a href="#top" class="group flex items-center" aria-label="Regia">
+                <span class="logo-wordmark text-[#0A0A0A]">REGIA</span>
             </a>
             <!-- Nav -->
             <nav class="hidden lg:flex items-center gap-10">
@@ -514,7 +510,7 @@
                 </div>
 
                 <div class="mt-24 md:mt-32 pt-8 border-t border-[#FAF9F6]/20 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-                    <p class="font-heading text-2xl">Regia<span class="serif-italic"> Modas</span></p>
+                    <p class="logo-wordmark text-[#FAF9F6]" style="font-size:1.6rem">REGIA</p>
                     <p class="text-[10px] uppercase tracking-[0.28em] text-[#FAF9F6]/50">© <span id="year"></span> · Feito com linha, tempo e cuidado</p>
                     <p class="text-[10px] uppercase tracking-[0.28em] text-[#FAF9F6]/50">Atelier · São Paulo, Brasil</p>
                 </div>
